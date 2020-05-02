@@ -11,9 +11,7 @@ services:
     container_name: hanako-express
     environment: 
       - PORT=3000
-      - MONGO_HOST=mongodb
-      - MONGO_DBNAME=hanako
-      - MONGO_UNAME_PASS=root:root
+      - MONGODB_URI=mongodb://root:root@mongodb:27017/hanako
     ports: 
       - 3000:3000
 

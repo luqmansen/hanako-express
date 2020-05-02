@@ -1,6 +1,6 @@
 require('dotenv').config();
 const port = (process.env.PORT || 3000)
-const mongo_url = "mongodb://".concat(process.env.MONGO_UNAME_PASS,"@",process.env.MONGO_HOST,":27017/",process.env.MONGO_DBNAME)
+const mongo_url = process.env.MONGODB_URI
 
 var express = require('express');
 var app = express();
@@ -14,7 +14,6 @@ mongoose.set('useNewUrlParser', true);
 mongoose.set('useUnifiedTopology', true);
 mongoose.set('useFindAndModify', false);
 
-console.log(mongo_url)
 mongoose.connect(mongo_url);
 var db = mongoose.connection;
 
