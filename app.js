@@ -1,4 +1,6 @@
 require('dotenv').config();
+const port = (process.env.PORT || 3000)
+const mongo_url = "mongodb://".concat(process.env.MONGO_UNAME_PASS,"@",process.env.MONGO_HOST,":27017/",process.env.MONGO_DBNAME)
 
 var express = require('express');
 var app = express();
@@ -12,8 +14,8 @@ mongoose.set('useNewUrlParser', true);
 mongoose.set('useUnifiedTopology', true);
 mongoose.set('useFindAndModify', false);
 
-
-mongoose.connect(process.env.MONGODB_URL);
+console.log(mongo_url)
+mongoose.connect(mongo_url);
 var db = mongoose.connection;
 
 Anime = require('./models/anime');
@@ -74,5 +76,5 @@ app.delete('/api/anime/:_id', function(req, res){
 
 
 
-app.listen(process.env.PORT);
-console.log('running on port ' + process.env.PORT);
+app.listen(port);
+console.log('running on port ' + port);
