@@ -1,4 +1,4 @@
-name: Push & Release Container to Heroku
+name: Heroku-CI
 
 on: 
   push:
