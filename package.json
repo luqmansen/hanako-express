@@ -1,0 +1,32 @@
+{
+  "name": "hanako-express",
+  "version": "1.0.0",
+  "description": "Old Hanako RESTful API Backend",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.11",
+    "nodemon": "^2.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/luqmansen/hanako-express.git"
+  },
+  "keywords": [
+    "nodejs",
+    "restful",
+    "api"
+  ],
+  "author": "luqmansen <luqmansen@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luqmansen/hanako-express/issues"
+  },
+  "homepage": "https://github.com/luqmansen/hanako-express#readme"
+}
