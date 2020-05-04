@@ -18,6 +18,7 @@ Setup .env file
 MONGODB_URL=mongodb://username:pass@host:27017/dbname
 PORT=3000
 ```
+if you are using docker compose, change host to `mongodb`
 
 ## Run
 #### Using Docker Compose
@@ -39,27 +40,15 @@ docker-compose up
   ```
 
 ## Available endpoints
-- **GET** /api/anime/
+- **GET** /api/animes/
+ optional param
+  - limit
+  - title
+  - type
 - **GET** /api/anime/:id
 - **POST** /api/anime/
 - **PUT** /api/anime/:id
 - **DELETE** /api/anime/:id
-
-
-## Deployment
-### Heroku
-#### Requirement
-- Heroku-CLI
-
-#### Step
-1. Create new app and API key
-```
-heroku create APP_NAME
-heroku authorization:create
-```
-2. Setup secret on repo setting, add `HEROKU_APP_NAME` and `HEROKU_API_KEY` 
-3. Push to master, and wait for deployment :D
-
 
 ## TODO
 - Refactor code
