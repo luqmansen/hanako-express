@@ -45,9 +45,9 @@ var animeSchema = mongoose.Schema({
 var Anime = (module.exports = mongoose.model("Anime", animeSchema, "anime"));
 
 module.exports.getAnimes = function (callback, ...param) {
-  var title = typeof param[0] === "undefined" ? " " : param[0];
-  var limit = typeof param[1] === "undefined" ? 10 : param[1];
-  var type = typeof param[2] === "undefined" ? " " : param[2];
+  var title = typeof param[0] == "undefined" ? "" : param[0];
+  var limit = typeof param[1] == "undefined" ? 10 : param[1];
+  var type = typeof param[2] == "undefined" ? "" : param[2];
 
   var query = {
     $and: [
