@@ -24,7 +24,9 @@ app.get('/', function(req, res){
 });
 
 app.get('/api/animes', function(req, res){
-    Anime.getAnimes(function(err, animes){
+    var limit = req.query.limit
+    if(typeof limit == "undefined"){limit = 10}
+    Anime.getAnimes(parseInt(limit),function(err, animes){
         if(err){throw err;}
         res.json(animes);
     });

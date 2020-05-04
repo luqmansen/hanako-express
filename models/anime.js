@@ -40,8 +40,8 @@ var animeSchema = mongoose.Schema({
 
 var Anime = module.exports = mongoose.model('Anime', animeSchema, 'anime');
 
-module.exports.getAnimes = function(callback, limit){
-    Anime.find(callback).limit(10);
+module.exports.getAnimes = function(limit=10, callback){
+    Anime.find(callback).limit(limit);
 }
 
 module.exports.getAnimeById = function(id, callback){
