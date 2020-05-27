@@ -72,7 +72,7 @@ app.put("/api/anime/:_id", function (req, res) {
 app.delete("/api/anime/:_id", function (req, res) {
   var id = req.params._id;
 
-  if (id.match.objectIdRegExp) {
+  if (id.match(objectIdRegExp)) {
     Anime.deleteAnime(id, function (err, anime) {
       if (err) res.json(err);
       res.json(anime);
